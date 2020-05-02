@@ -1,5 +1,4 @@
 let env = process.env.NODE_ENV || 'development'
-let name = process.env.MY_NAME
 
 let settings = require('./config/settings')[env]
 
@@ -78,4 +77,3 @@ require('./config/passport')()
 
 app.listen(settings.port)
 console.log(`Server listening on port ${settings.port}...`)
-console.log(name)

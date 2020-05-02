@@ -3,7 +3,6 @@ import PizzaCardList from '../common/Pizza/PizzaCardList'
 import Auth from '../../utils/auth'
 import { connect } from 'react-redux'
 import CircularCards from "../circularCards/CircularCards"
-require('dotenv').config()
 
 class HomePage extends Component {
   render () {
@@ -31,8 +30,6 @@ class HomePage extends Component {
       .sort((a, b) => b.likes.length - a.likes.length)
       .slice(startIndex, pageSize)
 
-    let name = process.env.MY_NAME
-
     return (
 
 <div className="container-fluid p-0" >
@@ -40,7 +37,7 @@ class HomePage extends Component {
         <div className="jumbotron jumbotron-fluid bg-cover text-white" style={{backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://cdn.pixabay.com/photo/2015/04/28/21/20/pizza-744405_960_720.jpg)"}}>
           
           <div className="container-fluid">
-          <h1 className="display-4">Welcome to {name} pizzaKhazana...! </h1>
+          <h1 className="display-4">Welcome to pizzaKhazana...! </h1>
           <hr className="my-4"/>
           <div style={{marginTop:"200px"}}>
           <p>Best Offers and Deals on Your Favorite Pizzas are Just a Few Clicks Away...!</p>
